@@ -20,7 +20,10 @@
     <main>
         <h2>Contact Eli Klunder</h2>
         <section>
-            <form name="contact" method="post" data-netlify="true">
+            <form name="contact" method="post" data-netlify="true" netlify>
+                <!-- Hidden field for Netlify form detection -->
+                <input type="hidden" name="form-name" value="contact" />
+                
                 <div>
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -32,6 +35,7 @@
                 <div>
                     <label for="reason">Reason for contact:</label>
                     <select id="reason" name="reason" required>
+                        <option value="">Please select a reason</option>
                         <option value="hi">Saying hi</option>
                         <option value="contractor">Looking for a contractor</option>
                         <option value="interview">Interested in an interview</option>
@@ -47,3 +51,4 @@
     </main>
 </body>
 </html>
+
